@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cartoon Forum 2023: Where Europe Pitches the Future of Animation | Animation Today</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=Jost:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  @page{
+    margin:0.4in 0.3in;
+  }
+  :root{
+    --brick:#a8431e;
+    --brick-deep:#7c3115;
+    --ink:#221f1c;
+    --paper:#f6f0e4;
+    --paper-2:#efe6d3;
+    --gold:#a9852f;
+    --rule:#d8cbae;
+    --gutter:48px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  *{-webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; color-adjust:exact !important;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Source Sans 3', sans-serif;
+    line-height:1.7;
+  }
+  @media (max-width:640px){
+    :root{--gutter:22px;}
+  }
+  @media print{
+    :root{--gutter:36px;}
+    body{background:var(--paper) !important;}
+  }
+  .masthead{
+    border-bottom:3px solid var(--ink);
+    padding:22px var(--gutter) 14px;
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .masthead .title{
+    font-family:'Jost',sans-serif;
+    font-weight:600;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    font-size:15px;
+  }
+  .masthead .sub{
+    font-family:'Source Sans 3',sans-serif;
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--brick-deep);
+  }
+  .hero{
+    position:relative;
+    max-width:1100px;
+    margin:0 auto;
+    padding:44px var(--gutter) 0;
+  }
+  .kicker{
+    font-family:'Jost',sans-serif;
+    font-weight:600;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    font-size:12.5px;
+    color:var(--brick);
+    margin-bottom:14px;
+  }
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:clamp(34px,5.4vw,62px);
+    line-height:1.04;
+    margin:0 0 20px;
+    letter-spacing:-0.01em;
+  }
+  .dek{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:400;
+    font-size:clamp(18px,2vw,22px);
+    color:#4a4238;
+    max-width:760px;
+    margin:0 0 26px;
+  }
+  .byline{
+    display:flex;
+    gap:18px;
+    align-items:center;
+    font-size:14px;
+    color:#5b5347;
+    border-top:1px solid var(--rule);
+    border-bottom:1px solid var(--rule);
+    padding:14px 0;
+    margin-bottom:0;
+    flex-wrap:wrap;
+  }
+  .byline b{color:var(--ink);}
+  .hero-fig{
+    max-width:1100px;
+    margin:0 auto;
+    padding:0 var(--gutter);
+  }
+  .hero-fig img{
+    width:100%;
+    height:auto;
+    display:block;
+    margin-top:30px;
+  }
+  figure{margin:0;}
+  figcaption{
+    font-size:12.5px;
+    color:#7a7263;
+    padding-top:9px;
+    font-family:'Source Sans 3',sans-serif;
+    border-bottom:1px solid var(--rule);
+    padding-bottom:20px;
+  }
+  .article{
+    max-width:760px;
+    margin:0 auto;
+    padding:38px var(--gutter) 100px;
+    font-size:18.5px;
+  }
+  .article p{margin:0 0 24px;}
+  .article p.lede::first-letter{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size:64px;
+    float:left;
+    line-height:0.8;
+    padding:8px 10px 0 0;
+    color:var(--brick-deep);
+  }
+  .article h2{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:30px;
+    margin:52px 0 20px;
+    color:var(--brick-deep);
+    letter-spacing:-0.01em;
+  }
+  .stat-strip{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1px;
+    background:var(--ink);
+    margin:6px 0 40px;
+    font-family:'Jost',sans-serif;
+  }
+  .stat-strip div{
+    background:var(--paper-2);
+    padding:20px 14px;
+    text-align:center;
+  }
+  .stat-strip .num{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:28px;
+    color:var(--brick);
+    display:block;
+  }
+  .stat-strip .lbl{
+    font-size:11px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:#6b6355;
+    display:block;
+    margin-top:4px;
+  }
+  blockquote{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:26px;
+    line-height:1.35;
+    color:var(--brick-deep);
+    border-top:2px solid var(--ink);
+    border-bottom:2px solid var(--ink);
+    padding:26px 0;
+    margin:44px 0;
+  }
+  blockquote cite{
+    display:block;
+    font-family:'Source Sans 3',sans-serif;
+    font-style:normal;
+    font-weight:600;
+    font-size:13px;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    color:var(--ink);
+    margin-top:14px;
+  }
+  .midfig{
+    margin:44px calc(-1 * var(--gutter));
+    padding:0 var(--gutter);
+  }
+  .midfig img{width:100%;height:auto;display:block;border-radius:2px;}
+  .midfig figcaption{border-bottom:none;padding-bottom:0;text-align:center;}
+  .pull{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:23px;
+    color:var(--ink);
+    border-left:4px solid var(--brick);
+    padding:2px 0 2px 22px;
+    margin:44px 0;
+  }
+  .signoff{
+    margin-top:60px;
+    padding-top:26px;
+    border-top:1px solid var(--rule);
+    font-family:'Source Sans 3',sans-serif;
+    font-size:15px;
+    color:#5b5347;
+  }
+  .signoff b{
+    display:block;
+    font-family:'Jost',sans-serif;
+    font-weight:600;
+    color:var(--ink);
+    letter-spacing:0.02em;
+    margin-bottom:2px;
+    font-size:16px;
+  }
+  .cta-box{
+    max-width:760px;
+    margin:0 auto 90px;
+    padding:0 var(--gutter);
+  }
+  .cta-box .inner{
+    background:var(--ink);
+    color:var(--paper);
+    padding:34px 32px;
+    border-radius:3px;
+  }
+  .cta-box h3{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:20px;
+    margin:0 0 10px;
+    color:#f0e4c8;
+  }
+  .cta-box p{
+    font-size:15px;
+    color:#d9d2c2;
+    margin:0;
+    line-height:1.6;
+  }
+  .cta-box code{
+    background:#3a352d;
+    padding:2px 6px;
+    border-radius:3px;
+    font-size:13px;
+    color:#f0e4c8;
+  }
+  @media (max-width:640px){
+    .stat-strip{grid-template-columns:repeat(2,1fr);}
+    .article{font-size:17px;}
+    blockquote{font-size:22px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="title"><a href="https://www.animationtoday.net/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Animation Today</a></div>
+  <div class="sub">Field Report · Toulouse, France</div>
+</div>
+
+<div class="hero">
+  <div class="kicker">Cartoon Forum 2023 · Coverage</div>
+  <h1>Cartoon Forum 2023: Where Europe Pitches the Future of Animation</h1>
+  <p class="dek">A field report from Toulouse — inside the pitching rooms, the co-production deals, and the lessons Indian animation can take from Europe's biggest TV series marketplace.</p>
+  <div class="byline">
+    <span><b>Rajeev Dwivedi</b> · Founder &amp; Editor in Chief, Animation Today</span>
+    <span>Toulouse, France · September 2023</span>
+  </div>
+</div>
+
+<div class="hero-fig">
+  <figure>
+    <img src="https://www.cartoon-media.eu/assets/images/Cartoon-Forum/2023/Report/_1200x630_crop_center-center_none/53200866458_05401355ee_o.jpg" alt="Cartoon Forum 2023 in Toulouse, France">
+    <figcaption>Cartoon Forum's 34th edition turned Toulouse into the meeting point for European animation, 18–21 September 2023. Photo: © Cartoon Forum 2023.</figcaption>
+  </figure>
+</div>
+
+<div class="article">
+
+<p class="lede">There are some events that you attend as a professional, and there are others that make you reassess the direction in which your industry is moving. Cartoon Forum in Toulouse is certainly the latter.</p>
+
+<p>For Animation Today, our objective has always been to look beyond the immediate headlines and understand where the global animation, gaming, VFX, comics and creative industries are heading. My visit to Cartoon Forum 2023 in Toulouse, France, offered precisely that opportunity.</p>
+
+<p>Held from 18 to 21 September 2023, the 34th edition of Cartoon Forum once again transformed Toulouse into an international meeting point for animation producers, broadcasters, distributors, investors, streamers and creative talent. The scale was impressive — 76 animated series projects from 16 European countries were pitched, representing approximately 473 hours of new content and a combined production budget of €393.5 million. The event attracted 1,051 participants representing 505 companies and 37 countries, including around 270 buyers, as per the data shared by online information portal Cineuropa.</p>
+
+<div class="stat-strip">
+  <div><span class="num">76</span><span class="lbl">Projects Pitched</span></div>
+  <div><span class="num">473h</span><span class="lbl">New Content</span></div>
+  <div><span class="num">€393.5M</span><span class="lbl">Combined Budget</span></div>
+  <div><span class="num">1,051</span><span class="lbl">Participants</span></div>
+</div>
+
+<p>But statistics alone do not explain what makes Cartoon Forum special. The real story is in the corridors, the pitching rooms, the meetings and, above all, the business conversations taking place around every project.</p>
+
+<h2>More Than a Pitching Forum</h2>
+
+<p>At first glance, Cartoon Forum appears to be a pitching event. Producers take the stage, present their projects and hope to attract broadcasters, distributors, investors or co-production partners.</p>
+
+<p>In reality, it is much more sophisticated.</p>
+
+<p>The forum is essentially a marketplace for ideas where creative concepts are presented alongside business plans, financing structures, target audiences, production models and distribution possibilities. A good idea is only the beginning. The ability to demonstrate how that idea can travel across borders, platforms and markets is equally important.</p>
+
+<p>This is perhaps the most important lesson for the Indian animation industry.</p>
+
+<p>For many years, animation discussions in India have focused predominantly on production capability, manpower and technical skills. At Toulouse, the conversation is equally about IP ownership, financing, co-production, distribution, licensing, merchandising, publishing, gaming and long-term exploitation of intellectual property.</p>
+
+<p>That difference is significant.</p>
+
+<div class="midfig">
+  <figure>
+    <img src="https://www.cartoon-media.eu/assets/images/Cartoon-Forum/2023/Report/_1920xAUTO_crop_center-center_none/FOR23_Officials.png" alt="Opening ceremony of Cartoon Forum 2023 in Toulouse">
+    <figcaption>Cartoon Forum's 2023 edition opened at the Centre des Congrès in Toulouse with remarks from Pierre Esplugas-Labatut (Mairie de Toulouse), Serge Regourd (Région Occitanie) and Pierre Siracusa (France Télévisions). Photo: © Celia Lenoir / Cartoon Forum.</figcaption>
+  </figure>
+</div>
+
+<blockquote>
+  “European animation is a wide patchwork with a great variety of patterns, textures and colors.”
+  <cite>— Annick Maes, General Director of Cartoon, ahead of the 2023 edition</cite>
+</blockquote>
+
+<h2>The Energy Inside the Pitching Rooms</h2>
+
+<p>The atmosphere inside the pitching rooms was electric.</p>
+
+<p>Every presentation had a limited window in which the creative team had to communicate its story, characters, visual language, target audience and commercial potential. There was little room for unnecessary explanation.</p>
+
+<p>The projects ranged from preschool and children's entertainment to family and adult animation. The diversity of storytelling was particularly striking.</p>
+
+<p>One of the projects that caught attention was Starpets, a space comedy featuring the flamboyant intergalactic emperor John LeDouche. The presentation was a reminder that European animation is not confined to conventional children's storytelling; there is an increasingly confident appetite for unconventional concepts and adult-oriented animation.</p>
+
+<p>Another interesting development was the increasing presence of transmedia thinking. According to the event's industry highlights, 17 projects — around 23% of the selection — demonstrated a crossover approach involving other media or platforms. Some projects were being developed simultaneously for television, books, mobile formats or games.</p>
+
+<p>For someone coming from India's animation and digital-content ecosystem, this was particularly encouraging.</p>
+
+<div class="midfig">
+  <figure>
+    <img src="https://www.cartoon-media.eu/assets/images/Cartoon-Forum/2023/Report/_1920xAUTO_crop_center-center_none/FOR23_Project-top-10-1.png" alt="Luce in the Lovely Land, Littlest Robot and Aquila — projects pitched at Cartoon Forum 2023">
+    <figcaption>"Luce in the Lovely Land," "Littlest Robot" and "Aquila" were among the co-productions that drew the most interest from buyers on the pitching floor. Photo: © Cartoon Forum 2023.</figcaption>
+  </figure>
+</div>
+
+<p class="pull">The future is clearly not about creating a television series in isolation. It is about building an IP ecosystem.</p>
+
+<h2>The Return of the United Kingdom</h2>
+
+<p>One of the significant highlights of Cartoon Forum 2023 was "Animated UK Meets Europe", an initiative designed to reconnect British animation producers with European partners following the UK's departure from the European Union.</p>
+
+<p>Five British projects were presented during a dedicated pitching session, supported by broadcasters including BBC, Disney, Warner Bros. Discovery and Sky. The projects covered a broad range of audiences and formats — from preschool and children's animation to adult-oriented 3D content.</p>
+
+<div class="midfig">
+  <figure>
+    <img src="https://www.cartoon-media.eu/assets/images/Cartoon-Forum/2023/Report/_1920xAUTO_crop_center-center_none/Kate-OConnor.jpg" alt="Kate O'Connor, Executive Chair of Animation UK, at Cartoon Forum 2023">
+    <figcaption>Kate O'Connor, Executive Chair of Animation UK, whose "Animated UK Meets Europe" initiative brought five British projects to Toulouse. Photo: © Celia Lenoir / Cartoon Forum.</figcaption>
+  </figure>
+</div>
+
+<p>What was particularly interesting was what happened beyond the stage.</p>
+
+<p>The initiative facilitated one-to-one meetings between British producers and potential European partners. According to the event's highlights, 41 production companies from 12 countries participated in these meetings.</p>
+
+<p>That is the real power of a market like Cartoon Forum.</p>
+
+<p>The pitch creates visibility.</p>
+
+<p>The meeting creates business.</p>
+
+<h2>France: A Strong Animation Ecosystem</h2>
+
+<p>Toulouse itself provides an important backdrop to understanding the strength of the French animation industry.</p>
+
+<p>France continues to be one of Europe's most important animation production centres, supported by public institutions, broadcasters, regional production incentives, specialised studios, animation schools and a mature co-production culture.</p>
+
+<p>The presence of local producers at Cartoon Forum reinforced this ecosystem. Projects from the Occitanie region included The Adventures of Pil, from Toulouse-based TAT Productions, demonstrating how successful feature-film properties can be developed further as television series.</p>
+
+<div class="midfig">
+  <figure>
+    <img src="https://www.cartoon-media.eu/assets/images/Cartoon-Forum/2023/Report/_1596xAUTO_crop_center-center_none/FOR23_Les-Toons-dici.jpg" alt="Les Toons d'ici — Toulouse's regional animation initiative during Cartoon Forum 2023">
+    <figcaption>"Les Toons d'ici" brought Toulouse and Occitanie's own animation output — series, features and shorts made in the region — to local schoolchildren alongside Cartoon Forum. Photo: © Cartoon 2023.</figcaption>
+  </figure>
+</div>
+
+<p>This is another area where India has enormous potential.</p>
+
+<p>India has hundreds of successful characters, stories, comic properties, folklore traditions and film properties that could potentially be developed into animation series, games, books and immersive experiences.</p>
+
+<p>The question is not whether India has stories.</p>
+
+<p>The question is whether we are building the IP business around those stories.</p>
+
+<h2>Animation Is Becoming Platform-Agnostic</h2>
+
+<p>One of my strongest takeaways from Toulouse was that the boundaries between television, streaming, mobile, publishing and gaming are becoming increasingly irrelevant.</p>
+
+<p>The industry is moving towards platform-agnostic IP development.</p>
+
+<p>A successful animated property can begin as a book, become a television series, move into gaming, generate merchandise and eventually develop into films or immersive experiences.</p>
+
+<p>The Cartoon Forum selection reflected this change. Several projects were consciously conceived with multiple layers of exploitation rather than relying exclusively on television commissioning.</p>
+
+<p>For India, this should be a wake-up call.</p>
+
+<p>We have a tremendous advantage in terms of mythology, folklore, literature, comics, children's characters and popular culture. What we need is a stronger ecosystem connecting creators, producers, publishers, broadcasters, OTT platforms, game developers, investors and licensors.</p>
+
+<h2>Adult Animation Is No Longer an Afterthought</h2>
+
+<p>Another trend that deserves attention is the growing confidence around adult and young-adult animation.</p>
+
+<p>At Cartoon Forum 2023, approximately 14% of the selected projects targeted young adults or adults, up from 10% in 2022.</p>
+
+<p>This indicates that animation is increasingly being treated as a storytelling medium rather than merely a children's entertainment format.</p>
+
+<p>India too is beginning to recognise this opportunity. With the growth of OTT platforms and digital audiences, there is considerable potential for sophisticated animated storytelling for teenagers and adults.</p>
+
+<p>The opportunity exists in genres ranging from mythology and historical fiction to satire, comedy, science fiction and socially relevant storytelling.</p>
+
+<div class="midfig">
+  <figure>
+    <img src="https://www.cartoon-media.eu/assets/images/Cartoon-Forum/2023/Report/_1920xAUTO_crop_center-center_none/FOR23_Coaching-Programme-banner.png" alt="Cartoon Forum 2023 Coaching Programme with animation students in Toulouse">
+    <figcaption>Cartoon Forum's Coaching Programme brought students from 12 regional animation schools into the pitching process. Photo: © Celia Lenoir / Cartoon Forum.</figcaption>
+  </figure>
+</div>
+
+<h2>The Business of Co-Production</h2>
+
+<p>Perhaps the most important lesson I took away from Toulouse is the maturity of the European co-production model.</p>
+
+<p>A producer does not necessarily have to finance an entire project alone.</p>
+
+<p>Instead, a project can bring together producers from different countries, broadcasters, distributors, regional funds and other partners. Each participant contributes creatively and financially while opening access to new territories.</p>
+
+<p>This approach reduces risk and increases the potential market for the final property.</p>
+
+<p>For Indian producers, international co-production should therefore not be viewed merely as an opportunity to outsource production.</p>
+
+<p>It should be viewed as a mechanism to create globally marketable IP with Indian creative ownership at its core.</p>
+
+<blockquote>
+  “Cartoon Forum will always remain the leading forum for co-production — a window to the future.”
+  <cite>— Annick Maes, General Director of Cartoon, on the Forum's role for European producers</cite>
+</blockquote>
+
+<div class="midfig">
+  <figure>
+    <img src="https://www.cartoon-media.eu/assets/images/Cartoon-Forum/2023/Report/_1920xAUTO_crop_center-center_none/FOR23_Tributes.jpeg" alt="Cartoon Forum 2023 Tributes winners: Andrea Basílio (RTP), Lionel Marty (APC Kids), Eric Garnet and Anne de Galard (GO-N Productions)">
+    <figcaption>Andrea Basílio (RTP, Broadcaster of the Year), Lionel Marty (APC Kids, Distributor of the Year) and Eric Garnet &amp; Anne de Galard (GO-N Productions, Producer of the Year) — voted on by 1,051 attending professionals. Photo: © Celia Lenoir / Cartoon Forum.</figcaption>
+  </figure>
+</div>
+
+<h2>What Can India Learn?</h2>
+
+<p>Sitting through the pitches and interacting with professionals from different countries, I could not help but think about India's enormous creative potential.</p>
+
+<p>We have the talent.</p>
+
+<p>We have the technical capability.</p>
+
+<p>We have a huge domestic market.</p>
+
+<p>We have stories that are thousands of years old and contemporary stories that are equally compelling.</p>
+
+<p>What we need is greater integration between creative development and business development.</p>
+
+<p>Indian studios have demonstrated that they can deliver animation, VFX and CGI for international clients. The next stage must be to develop and own more original intellectual property.</p>
+
+<p>And this is where gaming becomes particularly important.</p>
+
+<p>A character developed for animation can potentially become a game. A game can create a community. That community can support merchandise, publishing, animation and immersive experiences.</p>
+
+<p>The opportunity is no longer simply to produce content.</p>
+
+<p class="pull">The opportunity is to build worlds.</p>
+
+<h2>Beyond Technology</h2>
+
+<p>As someone who has spent many years working across film restoration, colourisation, animation, CGI and emerging technologies, I found the experience particularly relevant.</p>
+
+<p>Technology is changing the production pipeline rapidly. AI, real-time rendering, virtual production and new distribution platforms are transforming the economics of content creation.</p>
+
+<p>But Cartoon Forum reinforced a simple truth: technology may make content faster and more efficient to produce, but it is still the idea, character, story and IP that create long-term value.</p>
+
+<p>That is a lesson worth remembering as India enters its next phase of growth in animation, gaming and immersive media.</p>
+
+<h2>Toulouse: A Meeting Place for the Future</h2>
+
+<p>Cartoon Forum 2023 was ultimately not about 76 projects.</p>
+
+<p>It was about the future business of animation.</p>
+
+<p>It was about creators looking for partners, broadcasters looking for the next big property, distributors searching for new territories, investors evaluating opportunities and producers trying to turn ideas into sustainable businesses.</p>
+
+<p>And perhaps that is why the atmosphere in Toulouse felt so different.</p>
+
+<p>People were not simply talking about animation.</p>
+
+<p>They were talking about what animation can become.</p>
+
+<p>For Animation Today, which has always attempted to connect India's creative community with international developments, Cartoon Forum offered an invaluable window into that future.</p>
+
+<blockquote>
+  “Every difficult challenge to come won't be solved without everyone involved.”
+  <cite>— Annick Maes, General Director of Cartoon, on the Forum's collective mission</cite>
+</blockquote>
+
+<p>My strongest takeaway from Toulouse is simple: India should not aspire merely to become the world's production destination for animation. We should aspire to become a creator and owner of globally successful intellectual properties.</p>
+
+<p>The next Indian animation success story may not necessarily begin with a studio looking for a production contract.</p>
+
+<p>It may begin with a character, a story, a game or an idea — and a producer brave enough to take it to the world.</p>
+
+<div class="signoff">
+  <b>Rajeev Dwivedi</b>
+  Executive Editor, Animation Today · India<br>
+  <a href="https://www.animationtoday.net/" target="_blank" rel="noopener" style="color:var(--brick-deep);">animationtoday.net</a>
+  &nbsp;·&nbsp;
+  <a href="https://www.livepixelstudios.com/" target="_blank" rel="noopener" style="color:var(--brick-deep);">livepixelstudios.com</a>
+</div>
+
+</div>
+
+
+</body>
+</html>
